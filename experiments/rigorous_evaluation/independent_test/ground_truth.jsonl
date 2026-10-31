@@ -1,0 +1,4 @@
+{"case_id":"indep_teamcity_01","expected_actor":"actor_apt29","open_set":false,"expected_relationships":[{"subject":"APT29 / SVR","predicate":"exploits","object":"CVE-2023-42793","source_id":"src_cisa_aa23_347a"}]}
+{"case_id":"indep_cyclopsblink_01","expected_actor":"actor_sandworm","open_set":false,"expected_relationships":[{"subject":"Sandworm","predicate":"uses","object":"Cyclops Blink","source_id":"src_cisa_aa22_054a"}]}
+{"case_id":"indep_kimsuky_01","expected_actor":"actor_kimsuky","open_set":true,"expected_relationships":[{"subject":"Kimsuky","predicate":"uses","object":"spearphishing attachments against think tanks","source_id":"src_cisa_aa20_301a"}]}
+{"case_id":"indep_lockbit_01","expected_actor":"actor_lockbit_3","open_set":true,"expected_relationships":[{"subject":"LockBit 3.0 affiliates","predicate":"exploits","object":"CVE-2023-4966","source_id":"src_cisa_aa23_325a"}]}

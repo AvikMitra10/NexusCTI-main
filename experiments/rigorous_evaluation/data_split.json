@@ -1,0 +1,70 @@
+{
+  "split_id": "nexuscti-frozen-independent-split-v2",
+  "freeze_date": "2026-10-30",
+  "evaluation_date": "2026-10-30",
+  "random_seed": 42,
+  "hash_specification": "SHA-256 of UTF-8 canonical JSON using sorted object keys, compact separators, ensure_ascii=false; graph nodes and authored edges and corpus documents preserve builder order.",
+  "frozen_training_data": {
+    "graph": {
+      "version": "nexuscti-default-graph-2026-10-30-v1",
+      "sha256": "016a61dddfee7696610495ef5ae17e64da47dfc5d9ce21c987f84d1cbf143910",
+      "node_count": 65,
+      "authored_edge_count": 65
+    },
+    "retrieval_corpus": {
+      "version": "nexuscti-default-corpus-2026-10-30-v1",
+      "sha256": "5abca5fd18373e62af3414e10438fcba61393342a0402d21cb0c84a56d67068a",
+      "document_count": 6
+    }
+  },
+  "test_split": {
+    "dataset_id": "nexuscti-frozen-independent-test-v2",
+    "prediction_inputs": "independent_test/test_cases.json",
+    "ground_truth": "independent_test/ground_truth.json",
+    "sources": "independent_test/source_registry.json",
+    "case_count": 2,
+    "case_ids": [
+      "frozen_cisa_unitronics_01",
+      "frozen_cisa_exchange_01"
+    ],
+    "case_type": "2 open-set actors absent from the frozen candidate graph"
+  },
+  "source_independence": {
+    "sources": [
+      "CISA AA23-335A",
+      "CISA AA23-352A"
+    ],
+    "checked_against_frozen_corpus": true,
+    "checked_against_experiments_directory": true,
+    "historical_experiment_search": "Repository search found no prior references to CyberAv3ngers, AA23-335A, CVE-2023-6448, Unitronics, Play ransomware, AA23-352A, or CVE-2022-41040 in experiments/ or nexuscti/data/.",
+    "source_pages_retrieved": true,
+    "prior_external_model_exposure_can_be_ruled_out": false
+  },
+  "execution_order": [
+    "python experiments\\rigorous_evaluation\\independent_test\\audit_frozen_split.py",
+    "python experiments\\rigorous_evaluation\\independent_test\\run_independent_predictions.py",
+    "python experiments\\rigorous_evaluation\\independent_test\\score_independent_predictions.py"
+  ],
+  "prediction_isolation": {
+    "prediction_runner_reads": [
+      "independent_test/test_cases.json",
+      "data_split.json",
+      "independent_test/frozen_overlap_audit.json"
+    ],
+    "prediction_runner_does_not_read": [
+      "independent_test/ground_truth.json",
+      "independent_test/source_registry.json"
+    ],
+    "label_scoring_runs_after_predictions_are_saved": true
+  },
+  "overlap_audit": "independent_test/frozen_overlap_audit.json",
+  "prediction_artifact": "independent_test/predictions.json",
+  "scored_results": "independent_test/evaluation_results.json",
+  "limitations": [
+    "Two cases are not enough to estimate generalization or statistical uncertainty.",
+    "Public sources were checked against this repository's graph, corpus, and prior experiment files, but prior exposure outside the repository cannot be ruled out.",
+    "Both expected actors are open-set. Closed-set actor accuracy is not applicable; abstention behavior is the relevant model outcome.",
+    "A source relationship being absent from the frozen data does not establish that the source claim is true.",
+    "Semantic support must be assessed separately; citation existence and passage retrieval are not semantic verification."
+  ]
+}

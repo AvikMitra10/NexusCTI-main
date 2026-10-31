@@ -1,0 +1,100 @@
+{
+  "dataset_id": "nexuscti-independent-test-v1",
+  "case_count": 4,
+  "prediction_inputs_actor_label_leaks": 0,
+  "anchors_resolving_in_graph": 0,
+  "anchors_found_exactly_in_retrieval_corpus": 0,
+  "expected_relationships_found_in_graph": 0,
+  "expected_relationships_with_text_overlap_in_corpus": 0,
+  "missing_source_records": 0,
+  "graph_sha256": "56c9833bcae142ef368f1dec39f731aa8b9b4d3b057fdbdda2e55c5bb494ec79",
+  "retrieval_corpus_sha256": "fcff404f9dd12042223b2ed304cda5fe7bb56cbdb88f75dbb555d40efe49f0be",
+  "findings": [
+    {
+      "case_id": "indep_teamcity_01",
+      "direct_actor_label_leakage": false,
+      "detected_actor_labels": [],
+      "anchor_resolves_in_graph": false,
+      "anchor_exact_text_in_retrieval_corpus": false,
+      "ground_truth_actor_in_candidate_graph": true,
+      "expected_relationships": [
+        {
+          "subject": "APT29 / SVR",
+          "predicate": "exploits",
+          "object": "CVE-2023-42793",
+          "source_id": "src_cisa_aa23_347a",
+          "subject_resolves_in_graph": false,
+          "object_resolves_in_graph": false,
+          "edge_exists_in_graph": false,
+          "relationship_text_overlap_in_index": false
+        }
+      ],
+      "missing_source_records": []
+    },
+    {
+      "case_id": "indep_cyclopsblink_01",
+      "direct_actor_label_leakage": false,
+      "detected_actor_labels": [],
+      "anchor_resolves_in_graph": false,
+      "anchor_exact_text_in_retrieval_corpus": false,
+      "ground_truth_actor_in_candidate_graph": true,
+      "expected_relationships": [
+        {
+          "subject": "Sandworm",
+          "predicate": "uses",
+          "object": "Cyclops Blink",
+          "source_id": "src_cisa_aa22_054a",
+          "subject_resolves_in_graph": true,
+          "object_resolves_in_graph": false,
+          "edge_exists_in_graph": false,
+          "relationship_text_overlap_in_index": false
+        }
+      ],
+      "missing_source_records": []
+    },
+    {
+      "case_id": "indep_kimsuky_01",
+      "direct_actor_label_leakage": false,
+      "detected_actor_labels": [],
+      "anchor_resolves_in_graph": false,
+      "anchor_exact_text_in_retrieval_corpus": false,
+      "ground_truth_actor_in_candidate_graph": false,
+      "expected_relationships": [
+        {
+          "subject": "Kimsuky",
+          "predicate": "uses",
+          "object": "spearphishing attachments against think tanks",
+          "source_id": "src_cisa_aa20_301a",
+          "subject_resolves_in_graph": false,
+          "object_resolves_in_graph": false,
+          "edge_exists_in_graph": false,
+          "relationship_text_overlap_in_index": false
+        }
+      ],
+      "missing_source_records": []
+    },
+    {
+      "case_id": "indep_lockbit_01",
+      "direct_actor_label_leakage": false,
+      "detected_actor_labels": [],
+      "anchor_resolves_in_graph": false,
+      "anchor_exact_text_in_retrieval_corpus": false,
+      "ground_truth_actor_in_candidate_graph": false,
+      "expected_relationships": [
+        {
+          "subject": "LockBit 3.0 affiliates",
+          "predicate": "exploits",
+          "object": "CVE-2023-4966",
+          "source_id": "src_cisa_aa23_325a",
+          "subject_resolves_in_graph": false,
+          "object_resolves_in_graph": false,
+          "edge_exists_in_graph": false,
+          "relationship_text_overlap_in_index": false
+        }
+      ],
+      "missing_source_records": []
+    }
+  ],
+  "scope": "Exact anchor and relationship-overlap checks against the current default in-repository graph and report corpus; no guarantee about prior model exposure or external data stores.",
+  "independence_checks_passed": true
+}

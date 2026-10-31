@@ -1,0 +1,596 @@
+{
+  "experiment": "component_ablation",
+  "dataset": "built-in benchmark cases",
+  "total_test_cases": 12,
+  "summary": {
+    "Vector RAG": {
+      "top1_accuracy": 41.67,
+      "actor_accuracy": 41.67,
+      "top3_accuracy": 83.33,
+      "top5_accuracy": 83.33,
+      "mrr": 0.5694,
+      "multihop_reasoning_success": 45.45,
+      "top1_error_rate": 58.33
+    },
+    "BM25 Retrieval": {
+      "top1_accuracy": 91.67,
+      "actor_accuracy": 91.67,
+      "top3_accuracy": 100.0,
+      "top5_accuracy": 100.0,
+      "mrr": 0.9583,
+      "multihop_reasoning_success": 90.91,
+      "top1_error_rate": 8.33
+    },
+    "GNN": {
+      "top1_accuracy": 16.67,
+      "actor_accuracy": 16.67,
+      "top3_accuracy": 50.0,
+      "top5_accuracy": 91.67,
+      "mrr": 0.3931,
+      "multihop_reasoning_success": 18.18,
+      "top1_error_rate": 83.33
+    },
+    "Knowledge Graph Reasoning": {
+      "top1_accuracy": 100.0,
+      "actor_accuracy": 100.0,
+      "top3_accuracy": 100.0,
+      "top5_accuracy": 100.0,
+      "mrr": 1.0,
+      "multihop_reasoning_success": 100.0,
+      "top1_error_rate": 0.0
+    },
+    "Hybrid NexusCTI": {
+      "top1_accuracy": 100.0,
+      "actor_accuracy": 100.0,
+      "top3_accuracy": 100.0,
+      "top5_accuracy": 100.0,
+      "mrr": 1.0,
+      "multihop_reasoning_success": 100.0,
+      "top1_error_rate": 0.0
+    }
+  },
+  "detailed_case_evaluations": [
+    {
+      "case_id": "test_case_01",
+      "ground_truth": "actor_apt29",
+      "predicted_top1": "actor_apt29",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.6881,
+      "model": "Vector RAG"
+    },
+    {
+      "case_id": "test_case_02",
+      "ground_truth": "actor_sandworm",
+      "predicted_top1": "actor_apt28",
+      "is_correct": false,
+      "rank": 3,
+      "confidence": 0.3478,
+      "model": "Vector RAG"
+    },
+    {
+      "case_id": "test_case_03",
+      "ground_truth": "actor_lazarus",
+      "predicted_top1": "actor_lazarus",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.8752,
+      "model": "Vector RAG"
+    },
+    {
+      "case_id": "test_case_04",
+      "ground_truth": "actor_apt28",
+      "predicted_top1": "actor_sandworm",
+      "is_correct": false,
+      "rank": 2,
+      "confidence": 0.5865,
+      "model": "Vector RAG"
+    },
+    {
+      "case_id": "test_case_05",
+      "ground_truth": "actor_fin7",
+      "predicted_top1": "actor_fin7",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.5404,
+      "model": "Vector RAG"
+    },
+    {
+      "case_id": "test_case_06",
+      "ground_truth": "actor_sandworm",
+      "predicted_top1": "actor_sandworm",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.681,
+      "model": "Vector RAG"
+    },
+    {
+      "case_id": "test_case_07",
+      "ground_truth": "actor_apt29",
+      "predicted_top1": "actor_fin7",
+      "is_correct": false,
+      "rank": 3,
+      "confidence": 0.3778,
+      "model": "Vector RAG"
+    },
+    {
+      "case_id": "test_case_08",
+      "ground_truth": "actor_apt28",
+      "predicted_top1": "actor_apt28",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.2288,
+      "model": "Vector RAG"
+    },
+    {
+      "case_id": "test_case_09",
+      "ground_truth": "actor_volt_typhoon",
+      "predicted_top1": "actor_sandworm",
+      "is_correct": false,
+      "rank": 99,
+      "confidence": 0.4136,
+      "model": "Vector RAG"
+    },
+    {
+      "case_id": "test_case_10",
+      "ground_truth": "actor_sandworm",
+      "predicted_top1": "actor_apt28",
+      "is_correct": false,
+      "rank": 3,
+      "confidence": 0.4119,
+      "model": "Vector RAG"
+    },
+    {
+      "case_id": "test_case_11",
+      "ground_truth": "actor_lazarus",
+      "predicted_top1": "actor_apt28",
+      "is_correct": false,
+      "rank": 99,
+      "confidence": 0.7926,
+      "model": "Vector RAG"
+    },
+    {
+      "case_id": "test_case_12",
+      "ground_truth": "actor_fin7",
+      "predicted_top1": "actor_apt29",
+      "is_correct": false,
+      "rank": 3,
+      "confidence": 0.4343,
+      "model": "Vector RAG"
+    },
+    {
+      "case_id": "test_case_01",
+      "ground_truth": "actor_apt29",
+      "predicted_top1": "actor_apt29",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.778,
+      "model": "BM25 Retrieval"
+    },
+    {
+      "case_id": "test_case_02",
+      "ground_truth": "actor_sandworm",
+      "predicted_top1": "actor_sandworm",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.7162,
+      "model": "BM25 Retrieval"
+    },
+    {
+      "case_id": "test_case_03",
+      "ground_truth": "actor_lazarus",
+      "predicted_top1": "actor_lazarus",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.948,
+      "model": "BM25 Retrieval"
+    },
+    {
+      "case_id": "test_case_04",
+      "ground_truth": "actor_apt28",
+      "predicted_top1": "actor_apt28",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.6884,
+      "model": "BM25 Retrieval"
+    },
+    {
+      "case_id": "test_case_05",
+      "ground_truth": "actor_fin7",
+      "predicted_top1": "actor_fin7",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.8978,
+      "model": "BM25 Retrieval"
+    },
+    {
+      "case_id": "test_case_06",
+      "ground_truth": "actor_sandworm",
+      "predicted_top1": "actor_sandworm",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.7427,
+      "model": "BM25 Retrieval"
+    },
+    {
+      "case_id": "test_case_07",
+      "ground_truth": "actor_apt29",
+      "predicted_top1": "actor_apt29",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.4181,
+      "model": "BM25 Retrieval"
+    },
+    {
+      "case_id": "test_case_08",
+      "ground_truth": "actor_apt28",
+      "predicted_top1": "actor_apt28",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.5073,
+      "model": "BM25 Retrieval"
+    },
+    {
+      "case_id": "test_case_09",
+      "ground_truth": "actor_volt_typhoon",
+      "predicted_top1": "actor_volt_typhoon",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.7282,
+      "model": "BM25 Retrieval"
+    },
+    {
+      "case_id": "test_case_10",
+      "ground_truth": "actor_sandworm",
+      "predicted_top1": "actor_sandworm",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.5984,
+      "model": "BM25 Retrieval"
+    },
+    {
+      "case_id": "test_case_11",
+      "ground_truth": "actor_lazarus",
+      "predicted_top1": "actor_lazarus",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.7549,
+      "model": "BM25 Retrieval"
+    },
+    {
+      "case_id": "test_case_12",
+      "ground_truth": "actor_fin7",
+      "predicted_top1": "actor_apt28",
+      "is_correct": false,
+      "rank": 2,
+      "confidence": 0.4429,
+      "model": "BM25 Retrieval"
+    },
+    {
+      "case_id": "test_case_01",
+      "ground_truth": "actor_apt29",
+      "predicted_top1": "actor_volt_typhoon",
+      "is_correct": false,
+      "rank": 3,
+      "confidence": 0.3929,
+      "model": "GNN"
+    },
+    {
+      "case_id": "test_case_02",
+      "ground_truth": "actor_sandworm",
+      "predicted_top1": "actor_apt28",
+      "is_correct": false,
+      "rank": 3,
+      "confidence": 0.1946,
+      "model": "GNN"
+    },
+    {
+      "case_id": "test_case_03",
+      "ground_truth": "actor_lazarus",
+      "predicted_top1": "actor_apt28",
+      "is_correct": false,
+      "rank": 5,
+      "confidence": 0.2224,
+      "model": "GNN"
+    },
+    {
+      "case_id": "test_case_04",
+      "ground_truth": "actor_apt28",
+      "predicted_top1": "actor_lazarus",
+      "is_correct": false,
+      "rank": 6,
+      "confidence": 0.3047,
+      "model": "GNN"
+    },
+    {
+      "case_id": "test_case_05",
+      "ground_truth": "actor_fin7",
+      "predicted_top1": "actor_apt28",
+      "is_correct": false,
+      "rank": 5,
+      "confidence": 0.2454,
+      "model": "GNN"
+    },
+    {
+      "case_id": "test_case_06",
+      "ground_truth": "actor_sandworm",
+      "predicted_top1": "actor_volt_typhoon",
+      "is_correct": false,
+      "rank": 3,
+      "confidence": 0.1819,
+      "model": "GNN"
+    },
+    {
+      "case_id": "test_case_07",
+      "ground_truth": "actor_apt29",
+      "predicted_top1": "actor_volt_typhoon",
+      "is_correct": false,
+      "rank": 2,
+      "confidence": 0.306,
+      "model": "GNN"
+    },
+    {
+      "case_id": "test_case_08",
+      "ground_truth": "actor_apt28",
+      "predicted_top1": "actor_lazarus",
+      "is_correct": false,
+      "rank": 5,
+      "confidence": 0.3216,
+      "model": "GNN"
+    },
+    {
+      "case_id": "test_case_09",
+      "ground_truth": "actor_volt_typhoon",
+      "predicted_top1": "actor_volt_typhoon",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.232,
+      "model": "GNN"
+    },
+    {
+      "case_id": "test_case_10",
+      "ground_truth": "actor_sandworm",
+      "predicted_top1": "actor_sandworm",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.3112,
+      "model": "GNN"
+    },
+    {
+      "case_id": "test_case_11",
+      "ground_truth": "actor_lazarus",
+      "predicted_top1": "actor_volt_typhoon",
+      "is_correct": false,
+      "rank": 4,
+      "confidence": 0.2267,
+      "model": "GNN"
+    },
+    {
+      "case_id": "test_case_12",
+      "ground_truth": "actor_fin7",
+      "predicted_top1": "actor_apt28",
+      "is_correct": false,
+      "rank": 5,
+      "confidence": 0.2715,
+      "model": "GNN"
+    },
+    {
+      "case_id": "test_case_01",
+      "ground_truth": "actor_apt29",
+      "predicted_top1": "actor_apt29",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.375,
+      "model": "Knowledge Graph Reasoning"
+    },
+    {
+      "case_id": "test_case_02",
+      "ground_truth": "actor_sandworm",
+      "predicted_top1": "actor_sandworm",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 1.0,
+      "model": "Knowledge Graph Reasoning"
+    },
+    {
+      "case_id": "test_case_03",
+      "ground_truth": "actor_lazarus",
+      "predicted_top1": "actor_lazarus",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.438,
+      "model": "Knowledge Graph Reasoning"
+    },
+    {
+      "case_id": "test_case_04",
+      "ground_truth": "actor_apt28",
+      "predicted_top1": "actor_apt28",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.3529,
+      "model": "Knowledge Graph Reasoning"
+    },
+    {
+      "case_id": "test_case_05",
+      "ground_truth": "actor_fin7",
+      "predicted_top1": "actor_fin7",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.438,
+      "model": "Knowledge Graph Reasoning"
+    },
+    {
+      "case_id": "test_case_06",
+      "ground_truth": "actor_sandworm",
+      "predicted_top1": "actor_sandworm",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 1.0,
+      "model": "Knowledge Graph Reasoning"
+    },
+    {
+      "case_id": "test_case_07",
+      "ground_truth": "actor_apt29",
+      "predicted_top1": "actor_apt29",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.3,
+      "model": "Knowledge Graph Reasoning"
+    },
+    {
+      "case_id": "test_case_08",
+      "ground_truth": "actor_apt28",
+      "predicted_top1": "actor_apt28",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.3097,
+      "model": "Knowledge Graph Reasoning"
+    },
+    {
+      "case_id": "test_case_09",
+      "ground_truth": "actor_volt_typhoon",
+      "predicted_top1": "actor_volt_typhoon",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.3659,
+      "model": "Knowledge Graph Reasoning"
+    },
+    {
+      "case_id": "test_case_10",
+      "ground_truth": "actor_sandworm",
+      "predicted_top1": "actor_sandworm",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 1.0,
+      "model": "Knowledge Graph Reasoning"
+    },
+    {
+      "case_id": "test_case_11",
+      "ground_truth": "actor_lazarus",
+      "predicted_top1": "actor_lazarus",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.3796,
+      "model": "Knowledge Graph Reasoning"
+    },
+    {
+      "case_id": "test_case_12",
+      "ground_truth": "actor_fin7",
+      "predicted_top1": "actor_fin7",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.3796,
+      "model": "Knowledge Graph Reasoning"
+    },
+    {
+      "case_id": "test_case_01",
+      "ground_truth": "actor_apt29",
+      "predicted_top1": "actor_apt29",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.5105,
+      "model": "Hybrid NexusCTI"
+    },
+    {
+      "case_id": "test_case_02",
+      "ground_truth": "actor_sandworm",
+      "predicted_top1": "actor_sandworm",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.4575,
+      "model": "Hybrid NexusCTI"
+    },
+    {
+      "case_id": "test_case_03",
+      "ground_truth": "actor_lazarus",
+      "predicted_top1": "actor_lazarus",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.5733,
+      "model": "Hybrid NexusCTI"
+    },
+    {
+      "case_id": "test_case_04",
+      "ground_truth": "actor_apt28",
+      "predicted_top1": "actor_apt28",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.4655,
+      "model": "Hybrid NexusCTI"
+    },
+    {
+      "case_id": "test_case_05",
+      "ground_truth": "actor_fin7",
+      "predicted_top1": "actor_fin7",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.4753,
+      "model": "Hybrid NexusCTI"
+    },
+    {
+      "case_id": "test_case_06",
+      "ground_truth": "actor_sandworm",
+      "predicted_top1": "actor_sandworm",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.6025,
+      "model": "Hybrid NexusCTI"
+    },
+    {
+      "case_id": "test_case_07",
+      "ground_truth": "actor_apt29",
+      "predicted_top1": "actor_apt29",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.4674,
+      "model": "Hybrid NexusCTI"
+    },
+    {
+      "case_id": "test_case_08",
+      "ground_truth": "actor_apt28",
+      "predicted_top1": "actor_apt28",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.4405,
+      "model": "Hybrid NexusCTI"
+    },
+    {
+      "case_id": "test_case_09",
+      "ground_truth": "actor_volt_typhoon",
+      "predicted_top1": "actor_volt_typhoon",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.4673,
+      "model": "Hybrid NexusCTI"
+    },
+    {
+      "case_id": "test_case_10",
+      "ground_truth": "actor_sandworm",
+      "predicted_top1": "actor_sandworm",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.5581,
+      "model": "Hybrid NexusCTI"
+    },
+    {
+      "case_id": "test_case_11",
+      "ground_truth": "actor_lazarus",
+      "predicted_top1": "actor_lazarus",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.4934,
+      "model": "Hybrid NexusCTI"
+    },
+    {
+      "case_id": "test_case_12",
+      "ground_truth": "actor_fin7",
+      "predicted_top1": "actor_fin7",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.3926,
+      "model": "Hybrid NexusCTI"
+    }
+  ],
+  "interpretation_note": "Exploratory component comparison on the built-in benchmark. Its cases and labels overlap the graph and report corpus; this is not an independent generalization estimate.",
+  "random_seed": 42
+}

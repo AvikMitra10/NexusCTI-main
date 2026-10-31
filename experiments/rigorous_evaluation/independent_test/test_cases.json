@@ -1,0 +1,17 @@
+{
+  "dataset_id": "nexuscti-frozen-independent-test-v2",
+  "cases": [
+    {
+      "case_id": "frozen_cisa_unitronics_01",
+      "task": "open_set_actor_attribution",
+      "query": "A Unitronics Vision Series programmable logic controller in a water and wastewater system was defaced, and its control logic and configuration were altered.",
+      "anchor_ioc": "Unitronics Vision Series PLC"
+    },
+    {
+      "case_id": "frozen_cisa_exchange_01",
+      "task": "open_set_actor_attribution",
+      "query": "An internet-facing Microsoft Exchange server shows exploitation of ProxyNotShell vulnerability CVE-2022-41040 followed by ransomware activity.",
+      "anchor_ioc": "CVE-2022-41040"
+    }
+  ]
+}

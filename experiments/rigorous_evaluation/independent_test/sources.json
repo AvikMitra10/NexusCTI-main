@@ -1,0 +1,36 @@
+{
+  "sources": [
+    {
+      "source_id": "src_cisa_aa23_347a",
+      "publisher": "CISA, FBI, NSA, NCSC, and partners",
+      "title": "Russian Foreign Intelligence Service (SVR) Cyber Actors Exploit JetBrains TeamCity CVE",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a",
+      "publication_date": "2023-12-13",
+      "supports": "The agencies assess SVR actors, also known as APT29, exploited CVE-2023-42793 against internet-connected JetBrains TeamCity servers."
+    },
+    {
+      "source_id": "src_cisa_aa22_054a",
+      "publisher": "CISA, NCSC, NSA, FBI, and partners",
+      "title": "New Sandworm Malware Cyclops Blink Replaces VPNFilter",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-054a",
+      "publication_date": "2022-02-23",
+      "supports": "The agencies identify Sandworm's use and deployment of the Cyclops Blink malware framework."
+    },
+    {
+      "source_id": "src_cisa_aa20_301a",
+      "publisher": "CISA, FBI, and U.S. Cyber Command Cyber National Mission Force",
+      "title": "North Korean Advanced Persistent Threat Focus: Kimsuky",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-301a",
+      "publication_date": "2020-10-27",
+      "supports": "The advisory attributes the activity to Kimsuky and describes spearphishing attachment tactics and targeting of think tanks."
+    },
+    {
+      "source_id": "src_cisa_aa23_325a",
+      "publisher": "CISA, FBI, MS-ISAC, and Australian Signals Directorate's ACSC",
+      "title": "LockBit 3.0 Ransomware Affiliates Exploit CVE-2023-4966",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-325a",
+      "publication_date": "2023-11-21",
+      "supports": "The advisory reports LockBit 3.0 affiliates exploiting CVE-2023-4966 against Citrix NetScaler appliances."
+    }
+  ]
+}

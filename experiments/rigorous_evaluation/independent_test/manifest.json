@@ -1,0 +1,24 @@
+{
+  "dataset_id": "nexuscti-independent-test-v1",
+  "dataset_date": "2026-10-30",
+  "case_count": 4,
+  "files": {
+    "prediction_inputs": "prediction_inputs.jsonl",
+    "ground_truth": "ground_truth.jsonl",
+    "sources": "sources.json"
+  },
+  "case_types": {
+    "known_actor_unseen_campaign": 2,
+    "open_set_unseen_actor": 2
+  },
+  "source_selection": "Public CISA advisories with explicit attribution or actor-specific reporting.",
+  "separation_claim": "The selected anchors and expected relationship claims are checked against the current default graph and retrieval corpus by validate_independence.py.",
+  "historical_exposure": "These source campaigns were previously cataloged in experiments/phase6_external_benchmark_20261010_231000 and related audit artifacts. This dataset is separated from the current graph/index, but is not a newly blinded or prospective holdout.",
+  "limitations": [
+    "Four cases are insufficient for broad generalization claims.",
+    "Public reports may have been encountered during prior model development even though these report records are absent from the current default retrieval corpus.",
+    "The Kimsuky and LockBit 3.0 cases are open-set; evaluate abstention separately from closed-set accuracy.",
+    "The expected facts are evidence annotations, not full source documents.",
+    "The overlap audit checks the current in-repository default graph and corpus only; it cannot certify historical runtime stores or external models."
+  ]
+}

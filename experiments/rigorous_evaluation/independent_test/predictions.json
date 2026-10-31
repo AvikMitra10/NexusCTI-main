@@ -1,0 +1,103 @@
+{
+  "dataset_id": "nexuscti-frozen-independent-test-v2",
+  "prediction_input_path": "experiments\\rigorous_evaluation\\independent_test\\test_cases.json",
+  "ground_truth_loaded": false,
+  "random_seed": 42,
+  "frozen_training_data": {
+    "graph": {
+      "version": "nexuscti-default-graph-2026-10-30-v1",
+      "sha256": "016a61dddfee7696610495ef5ae17e64da47dfc5d9ce21c987f84d1cbf143910",
+      "node_count": 65,
+      "authored_edge_count": 65
+    },
+    "retrieval_corpus": {
+      "version": "nexuscti-default-corpus-2026-10-30-v1",
+      "sha256": "5abca5fd18373e62af3414e10438fcba61393342a0402d21cb0c84a56d67068a",
+      "document_count": 6
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "frozen_cisa_unitronics_01",
+      "predicted_top1": "actor_lazarus",
+      "top_actor_name": "Lazarus Group (HIDDEN COBRA)",
+      "confidence": 0.3389,
+      "verdict": "INCONCLUSIVE",
+      "abstained": true,
+      "candidates": [
+        {
+          "actor_id": "actor_lazarus",
+          "confidence": 0.3389,
+          "verdict": "INCONCLUSIVE"
+        },
+        {
+          "actor_id": "actor_apt28",
+          "confidence": 0.3368,
+          "verdict": "INCONCLUSIVE"
+        },
+        {
+          "actor_id": "actor_volt_typhoon",
+          "confidence": 0.2797,
+          "verdict": "INCONCLUSIVE"
+        },
+        {
+          "actor_id": "actor_fin7",
+          "confidence": 0.2546,
+          "verdict": "INCONCLUSIVE"
+        },
+        {
+          "actor_id": "actor_sandworm",
+          "confidence": 0.1125,
+          "verdict": "INCONCLUSIVE"
+        },
+        {
+          "actor_id": "actor_apt29",
+          "confidence": 0.1125,
+          "verdict": "INCONCLUSIVE"
+        }
+      ],
+      "evidence_path": []
+    },
+    {
+      "case_id": "frozen_cisa_exchange_01",
+      "predicted_top1": "actor_apt28",
+      "top_actor_name": "APT28 (Fancy Bear / STRONTIUM)",
+      "confidence": 0.3345,
+      "verdict": "INCONCLUSIVE",
+      "abstained": true,
+      "candidates": [
+        {
+          "actor_id": "actor_apt28",
+          "confidence": 0.3345,
+          "verdict": "INCONCLUSIVE"
+        },
+        {
+          "actor_id": "actor_lazarus",
+          "confidence": 0.3329,
+          "verdict": "INCONCLUSIVE"
+        },
+        {
+          "actor_id": "actor_volt_typhoon",
+          "confidence": 0.3277,
+          "verdict": "INCONCLUSIVE"
+        },
+        {
+          "actor_id": "actor_sandworm",
+          "confidence": 0.1125,
+          "verdict": "INCONCLUSIVE"
+        },
+        {
+          "actor_id": "actor_apt29",
+          "confidence": 0.1125,
+          "verdict": "INCONCLUSIVE"
+        },
+        {
+          "actor_id": "actor_fin7",
+          "confidence": 0.1125,
+          "verdict": "INCONCLUSIVE"
+        }
+      ],
+      "evidence_path": []
+    }
+  ]
+}

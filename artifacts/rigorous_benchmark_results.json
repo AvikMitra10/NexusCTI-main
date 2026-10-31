@@ -1,0 +1,790 @@
+{
+  "summary": {
+    "Naive Vector-only RAG": {
+      "top1_accuracy": 41.67,
+      "actor_accuracy": 41.67,
+      "top3_accuracy": 83.33,
+      "top5_accuracy": 83.33,
+      "multihop_reasoning_success": 45.45,
+      "hallucination_rate": 58.33,
+      "mrr": 0.5694,
+      "evidence_validity_rate": null,
+      "citation_coverage": null,
+      "multihop_path_validity": null,
+      "unsupported_evidence_rate": null
+    },
+    "Standalone GNN Classifier": {
+      "top1_accuracy": 8.33,
+      "actor_accuracy": 8.33,
+      "top3_accuracy": 25.0,
+      "top5_accuracy": 83.33,
+      "multihop_reasoning_success": 9.09,
+      "hallucination_rate": 91.67,
+      "mrr": 0.3,
+      "evidence_validity_rate": null,
+      "citation_coverage": null,
+      "multihop_path_validity": null,
+      "unsupported_evidence_rate": null
+    },
+    "NexusCTI Hybrid (GNN + RAG)": {
+      "top1_accuracy": 100.0,
+      "actor_accuracy": 100.0,
+      "top3_accuracy": 100.0,
+      "top5_accuracy": 100.0,
+      "multihop_reasoning_success": 100.0,
+      "hallucination_rate": 0.0,
+      "mrr": 1.0,
+      "evidence_validity_rate": 100.0,
+      "citation_coverage": 100.0,
+      "multihop_path_validity": 100.0,
+      "unsupported_evidence_rate": 0.0
+    }
+  },
+  "detailed_case_evaluations": [
+    {
+      "case_id": "test_case_01",
+      "case_name": "APT29 SUNBURST Direct Backdoor Detection",
+      "category": "direct_observation",
+      "ground_truth": "actor_apt29",
+      "predicted_top1": "actor_apt29",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.6881,
+      "model": "Naive Vector-only RAG"
+    },
+    {
+      "case_id": "test_case_02",
+      "case_name": "Sandworm Industroyer Power Grid Payload",
+      "category": "direct_observation",
+      "ground_truth": "actor_sandworm",
+      "predicted_top1": "actor_apt28",
+      "is_correct": false,
+      "rank": 3,
+      "confidence": 0.3478,
+      "model": "Naive Vector-only RAG"
+    },
+    {
+      "case_id": "test_case_03",
+      "case_name": "Lazarus AppleJeus Trojanized Installer",
+      "category": "direct_observation",
+      "ground_truth": "actor_lazarus",
+      "predicted_top1": "actor_lazarus",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.8752,
+      "model": "Naive Vector-only RAG"
+    },
+    {
+      "case_id": "test_case_04",
+      "case_name": "APT28 Zebrocy Binary Hash to C2 Pivot",
+      "category": "stager_pivot",
+      "ground_truth": "actor_apt28",
+      "predicted_top1": "actor_sandworm",
+      "is_correct": false,
+      "rank": 2,
+      "confidence": 0.5865,
+      "model": "Naive Vector-only RAG"
+    },
+    {
+      "case_id": "test_case_05",
+      "case_name": "FIN7 Griffon Stager & Zerologon Exploitation",
+      "category": "stager_pivot",
+      "ground_truth": "actor_fin7",
+      "predicted_top1": "actor_fin7",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.5404,
+      "model": "Naive Vector-only RAG"
+    },
+    {
+      "case_id": "test_case_06",
+      "case_name": "Sandworm NotPetya Wiper Binary Artifact",
+      "category": "stager_pivot",
+      "ground_truth": "actor_sandworm",
+      "predicted_top1": "actor_sandworm",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.681,
+      "model": "Naive Vector-only RAG"
+    },
+    {
+      "case_id": "test_case_07",
+      "case_name": "APT29 Multi-Hop Secondary Infrastructure Pivot",
+      "category": "infrastructure_pivot",
+      "ground_truth": "actor_apt29",
+      "predicted_top1": "actor_fin7",
+      "is_correct": false,
+      "rank": 3,
+      "confidence": 0.3778,
+      "model": "Naive Vector-only RAG"
+    },
+    {
+      "case_id": "test_case_08",
+      "case_name": "APT28 Shared DNS Resolution Pivot",
+      "category": "infrastructure_pivot",
+      "ground_truth": "actor_apt28",
+      "predicted_top1": "actor_apt28",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.2288,
+      "model": "Naive Vector-only RAG"
+    },
+    {
+      "case_id": "test_case_09",
+      "case_name": "Volt Typhoon SOHO Mesh Egress Pivot",
+      "category": "infrastructure_pivot",
+      "ground_truth": "actor_volt_typhoon",
+      "predicted_top1": "actor_sandworm",
+      "is_correct": false,
+      "rank": 99,
+      "confidence": 0.4136,
+      "model": "Naive Vector-only RAG"
+    },
+    {
+      "case_id": "test_case_10",
+      "case_name": "Sandworm Obfuscated Subnet Pivot to BlackEnergy C2",
+      "category": "deep_chain",
+      "ground_truth": "actor_sandworm",
+      "predicted_top1": "actor_apt28",
+      "is_correct": false,
+      "rank": 3,
+      "confidence": 0.4119,
+      "model": "Naive Vector-only RAG"
+    },
+    {
+      "case_id": "test_case_11",
+      "case_name": "Lazarus North Korean AS131279 Gateway Correlation",
+      "category": "deep_chain",
+      "ground_truth": "actor_lazarus",
+      "predicted_top1": "actor_apt28",
+      "is_correct": false,
+      "rank": 99,
+      "confidence": 0.7926,
+      "model": "Naive Vector-only RAG"
+    },
+    {
+      "case_id": "test_case_12",
+      "case_name": "FIN7 Hosting Staging Infrastructure Pivot",
+      "category": "deep_chain",
+      "ground_truth": "actor_fin7",
+      "predicted_top1": "actor_apt29",
+      "is_correct": false,
+      "rank": 3,
+      "confidence": 0.4343,
+      "model": "Naive Vector-only RAG"
+    },
+    {
+      "case_id": "test_case_01",
+      "case_name": "APT29 SUNBURST Direct Backdoor Detection",
+      "category": "direct_observation",
+      "ground_truth": "actor_apt29",
+      "predicted_top1": "actor_volt_typhoon",
+      "is_correct": false,
+      "rank": 4,
+      "confidence": 0.4871,
+      "model": "Standalone GNN Classifier"
+    },
+    {
+      "case_id": "test_case_02",
+      "case_name": "Sandworm Industroyer Power Grid Payload",
+      "category": "direct_observation",
+      "ground_truth": "actor_sandworm",
+      "predicted_top1": "actor_lazarus",
+      "is_correct": false,
+      "rank": 3,
+      "confidence": 0.2101,
+      "model": "Standalone GNN Classifier"
+    },
+    {
+      "case_id": "test_case_03",
+      "case_name": "Lazarus AppleJeus Trojanized Installer",
+      "category": "direct_observation",
+      "ground_truth": "actor_lazarus",
+      "predicted_top1": "actor_apt28",
+      "is_correct": false,
+      "rank": 5,
+      "confidence": 0.2719,
+      "model": "Standalone GNN Classifier"
+    },
+    {
+      "case_id": "test_case_04",
+      "case_name": "APT28 Zebrocy Binary Hash to C2 Pivot",
+      "category": "stager_pivot",
+      "ground_truth": "actor_apt28",
+      "predicted_top1": "actor_lazarus",
+      "is_correct": false,
+      "rank": 6,
+      "confidence": 0.3644,
+      "model": "Standalone GNN Classifier"
+    },
+    {
+      "case_id": "test_case_05",
+      "case_name": "FIN7 Griffon Stager & Zerologon Exploitation",
+      "category": "stager_pivot",
+      "ground_truth": "actor_fin7",
+      "predicted_top1": "actor_apt28",
+      "is_correct": false,
+      "rank": 5,
+      "confidence": 0.2336,
+      "model": "Standalone GNN Classifier"
+    },
+    {
+      "case_id": "test_case_06",
+      "case_name": "Sandworm NotPetya Wiper Binary Artifact",
+      "category": "stager_pivot",
+      "ground_truth": "actor_sandworm",
+      "predicted_top1": "actor_apt29",
+      "is_correct": false,
+      "rank": 4,
+      "confidence": 0.2298,
+      "model": "Standalone GNN Classifier"
+    },
+    {
+      "case_id": "test_case_07",
+      "case_name": "APT29 Multi-Hop Secondary Infrastructure Pivot",
+      "category": "infrastructure_pivot",
+      "ground_truth": "actor_apt29",
+      "predicted_top1": "actor_apt28",
+      "is_correct": false,
+      "rank": 3,
+      "confidence": 0.2258,
+      "model": "Standalone GNN Classifier"
+    },
+    {
+      "case_id": "test_case_08",
+      "case_name": "APT28 Shared DNS Resolution Pivot",
+      "category": "infrastructure_pivot",
+      "ground_truth": "actor_apt28",
+      "predicted_top1": "actor_lazarus",
+      "is_correct": false,
+      "rank": 6,
+      "confidence": 0.3779,
+      "model": "Standalone GNN Classifier"
+    },
+    {
+      "case_id": "test_case_09",
+      "case_name": "Volt Typhoon SOHO Mesh Egress Pivot",
+      "category": "infrastructure_pivot",
+      "ground_truth": "actor_volt_typhoon",
+      "predicted_top1": "actor_apt29",
+      "is_correct": false,
+      "rank": 4,
+      "confidence": 0.2311,
+      "model": "Standalone GNN Classifier"
+    },
+    {
+      "case_id": "test_case_10",
+      "case_name": "Sandworm Obfuscated Subnet Pivot to BlackEnergy C2",
+      "category": "deep_chain",
+      "ground_truth": "actor_sandworm",
+      "predicted_top1": "actor_sandworm",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.276,
+      "model": "Standalone GNN Classifier"
+    },
+    {
+      "case_id": "test_case_11",
+      "case_name": "Lazarus North Korean AS131279 Gateway Correlation",
+      "category": "deep_chain",
+      "ground_truth": "actor_lazarus",
+      "predicted_top1": "actor_apt28",
+      "is_correct": false,
+      "rank": 4,
+      "confidence": 0.2656,
+      "model": "Standalone GNN Classifier"
+    },
+    {
+      "case_id": "test_case_12",
+      "case_name": "FIN7 Hosting Staging Infrastructure Pivot",
+      "category": "deep_chain",
+      "ground_truth": "actor_fin7",
+      "predicted_top1": "actor_apt29",
+      "is_correct": false,
+      "rank": 5,
+      "confidence": 0.2357,
+      "model": "Standalone GNN Classifier"
+    },
+    {
+      "case_id": "test_case_01",
+      "case_name": "APT29 SUNBURST Direct Backdoor Detection",
+      "category": "direct_observation",
+      "ground_truth": "actor_apt29",
+      "predicted_top1": "actor_apt29",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.5056,
+      "hops": 2,
+      "hallucination_risk": "MINIMAL (Dual Grounded)",
+      "evidence_path": [
+        {
+          "source": "ioc_domain_avsvmcloud",
+          "relation": "rev_communicates_with",
+          "target": "mal_sunburst",
+          "citation": "FireEye DGA Telemetry"
+        },
+        {
+          "source": "mal_sunburst",
+          "relation": "rev_uses",
+          "target": "actor_apt29",
+          "citation": "FireEye Mandiant SUNBURST Report"
+        }
+      ],
+      "evidence_validity": 100.0,
+      "citation_coverage": 100.0,
+      "path_connected": true,
+      "path_valid": true,
+      "multihop_path_status": "valid",
+      "multihop_path_valid": true,
+      "unsupported_evidence_rate": 0.0,
+      "invalid_evidence": [],
+      "disconnected_path_edges": [],
+      "model": "NexusCTI Hybrid (GNN + RAG)"
+    },
+    {
+      "case_id": "test_case_02",
+      "case_name": "Sandworm Industroyer Power Grid Payload",
+      "category": "direct_observation",
+      "ground_truth": "actor_sandworm",
+      "predicted_top1": "actor_sandworm",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.4556,
+      "hops": 1,
+      "hallucination_risk": "MINIMAL (Dual Grounded)",
+      "evidence_path": [
+        {
+          "source": "mal_industroyer",
+          "relation": "rev_uses",
+          "target": "actor_sandworm",
+          "citation": "Dragos CrashOverride Assessment"
+        }
+      ],
+      "evidence_validity": 100.0,
+      "citation_coverage": 100.0,
+      "path_connected": true,
+      "path_valid": true,
+      "multihop_path_status": "not_applicable",
+      "multihop_path_valid": null,
+      "unsupported_evidence_rate": 0.0,
+      "invalid_evidence": [],
+      "disconnected_path_edges": [],
+      "model": "NexusCTI Hybrid (GNN + RAG)"
+    },
+    {
+      "case_id": "test_case_03",
+      "case_name": "Lazarus AppleJeus Trojanized Installer",
+      "category": "direct_observation",
+      "ground_truth": "actor_lazarus",
+      "predicted_top1": "actor_lazarus",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.57,
+      "hops": 2,
+      "hallucination_risk": "MINIMAL (Dual Grounded)",
+      "evidence_path": [
+        {
+          "source": "ioc_domain_crypto_wallet",
+          "relation": "rev_communicates_with",
+          "target": "mal_applejeus",
+          "citation": "FBI Cyber Division Alert"
+        },
+        {
+          "source": "mal_applejeus",
+          "relation": "rev_uses",
+          "target": "actor_lazarus",
+          "citation": "CISA AA20-239A"
+        }
+      ],
+      "evidence_validity": 100.0,
+      "citation_coverage": 100.0,
+      "path_connected": true,
+      "path_valid": true,
+      "multihop_path_status": "valid",
+      "multihop_path_valid": true,
+      "unsupported_evidence_rate": 0.0,
+      "invalid_evidence": [],
+      "disconnected_path_edges": [],
+      "model": "NexusCTI Hybrid (GNN + RAG)"
+    },
+    {
+      "case_id": "test_case_04",
+      "case_name": "APT28 Zebrocy Binary Hash to C2 Pivot",
+      "category": "stager_pivot",
+      "ground_truth": "actor_apt28",
+      "predicted_top1": "actor_apt28",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.4655,
+      "hops": 2,
+      "hallucination_risk": "MINIMAL (Dual Grounded)",
+      "evidence_path": [
+        {
+          "source": "ioc_hash_zebrocy_bin",
+          "relation": "rev_communicates_with",
+          "target": "mal_zebrocy",
+          "citation": "ESET Sednit Whitepaper"
+        },
+        {
+          "source": "mal_zebrocy",
+          "relation": "rev_uses",
+          "target": "actor_apt28",
+          "citation": "CISA AA20-302A"
+        }
+      ],
+      "evidence_validity": 100.0,
+      "citation_coverage": 100.0,
+      "path_connected": true,
+      "path_valid": true,
+      "multihop_path_status": "valid",
+      "multihop_path_valid": true,
+      "unsupported_evidence_rate": 0.0,
+      "invalid_evidence": [],
+      "disconnected_path_edges": [],
+      "model": "NexusCTI Hybrid (GNN + RAG)"
+    },
+    {
+      "case_id": "test_case_05",
+      "case_name": "FIN7 Griffon Stager & Zerologon Exploitation",
+      "category": "stager_pivot",
+      "ground_truth": "actor_fin7",
+      "predicted_top1": "actor_fin7",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.4733,
+      "hops": 2,
+      "hallucination_risk": "MINIMAL (Dual Grounded)",
+      "evidence_path": [
+        {
+          "source": "ioc_hash_griffon_js",
+          "relation": "rev_communicates_with",
+          "target": "mal_griffon",
+          "citation": "Mandiant Technical Analysis"
+        },
+        {
+          "source": "mal_griffon",
+          "relation": "rev_uses",
+          "target": "actor_fin7",
+          "citation": "Mandiant FIN7 In-Depth"
+        }
+      ],
+      "evidence_validity": 100.0,
+      "citation_coverage": 100.0,
+      "path_connected": true,
+      "path_valid": true,
+      "multihop_path_status": "valid",
+      "multihop_path_valid": true,
+      "unsupported_evidence_rate": 0.0,
+      "invalid_evidence": [],
+      "disconnected_path_edges": [],
+      "model": "NexusCTI Hybrid (GNN + RAG)"
+    },
+    {
+      "case_id": "test_case_06",
+      "case_name": "Sandworm NotPetya Wiper Binary Artifact",
+      "category": "stager_pivot",
+      "ground_truth": "actor_sandworm",
+      "predicted_top1": "actor_sandworm",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.5932,
+      "hops": 2,
+      "hallucination_risk": "MINIMAL (Dual Grounded)",
+      "evidence_path": [
+        {
+          "source": "ioc_hash_notpetya_bin",
+          "relation": "rev_communicates_with",
+          "target": "mal_notpetya",
+          "citation": "US-CERT TA17-181A"
+        },
+        {
+          "source": "mal_notpetya",
+          "relation": "rev_uses",
+          "target": "actor_sandworm",
+          "citation": "UK NCSC Attribution Notice"
+        }
+      ],
+      "evidence_validity": 100.0,
+      "citation_coverage": 100.0,
+      "path_connected": true,
+      "path_valid": true,
+      "multihop_path_status": "valid",
+      "multihop_path_valid": true,
+      "unsupported_evidence_rate": 0.0,
+      "invalid_evidence": [],
+      "disconnected_path_edges": [],
+      "model": "NexusCTI Hybrid (GNN + RAG)"
+    },
+    {
+      "case_id": "test_case_07",
+      "case_name": "APT29 Multi-Hop Secondary Infrastructure Pivot",
+      "category": "infrastructure_pivot",
+      "ground_truth": "actor_apt29",
+      "predicted_top1": "actor_apt29",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.4598,
+      "hops": 4,
+      "hallucination_risk": "MINIMAL (Dual Grounded)",
+      "evidence_path": [
+        {
+          "source": "ioc_ip_185_225_17_42",
+          "relation": "rev_resolves_to",
+          "target": "ioc_domain_freescan",
+          "citation": "ThreatConnect Research"
+        },
+        {
+          "source": "ioc_domain_freescan",
+          "relation": "rev_shares_infra",
+          "target": "ioc_domain_avsvmcloud",
+          "citation": "SSL Certificate Serial Overlap"
+        },
+        {
+          "source": "ioc_domain_avsvmcloud",
+          "relation": "rev_communicates_with",
+          "target": "mal_sunburst",
+          "citation": "FireEye DGA Telemetry"
+        },
+        {
+          "source": "mal_sunburst",
+          "relation": "rev_uses",
+          "target": "actor_apt29",
+          "citation": "FireEye Mandiant SUNBURST Report"
+        }
+      ],
+      "evidence_validity": 100.0,
+      "citation_coverage": 100.0,
+      "path_connected": true,
+      "path_valid": true,
+      "multihop_path_status": "valid",
+      "multihop_path_valid": true,
+      "unsupported_evidence_rate": 0.0,
+      "invalid_evidence": [],
+      "disconnected_path_edges": [],
+      "model": "NexusCTI Hybrid (GNN + RAG)"
+    },
+    {
+      "case_id": "test_case_08",
+      "case_name": "APT28 Shared DNS Resolution Pivot",
+      "category": "infrastructure_pivot",
+      "ground_truth": "actor_apt28",
+      "predicted_top1": "actor_apt28",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.4402,
+      "hops": 3,
+      "hallucination_risk": "MINIMAL (Dual Grounded)",
+      "evidence_path": [
+        {
+          "source": "ioc_domain_mail_update",
+          "relation": "rev_shares_infra",
+          "target": "ioc_domain_auth_m365",
+          "citation": "WHOIS / Registrar Clustering"
+        },
+        {
+          "source": "ioc_domain_auth_m365",
+          "relation": "rev_communicates_with",
+          "target": "mal_zebrocy",
+          "citation": "ESET Sednit Whitepaper"
+        },
+        {
+          "source": "mal_zebrocy",
+          "relation": "rev_uses",
+          "target": "actor_apt28",
+          "citation": "CISA AA20-302A"
+        }
+      ],
+      "evidence_validity": 100.0,
+      "citation_coverage": 100.0,
+      "path_connected": true,
+      "path_valid": true,
+      "multihop_path_status": "valid",
+      "multihop_path_valid": true,
+      "unsupported_evidence_rate": 0.0,
+      "invalid_evidence": [],
+      "disconnected_path_edges": [],
+      "model": "NexusCTI Hybrid (GNN + RAG)"
+    },
+    {
+      "case_id": "test_case_09",
+      "case_name": "Volt Typhoon SOHO Mesh Egress Pivot",
+      "category": "infrastructure_pivot",
+      "ground_truth": "actor_volt_typhoon",
+      "predicted_top1": "actor_volt_typhoon",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.4552,
+      "hops": 4,
+      "hallucination_risk": "MINIMAL (Dual Grounded)",
+      "evidence_path": [
+        {
+          "source": "ioc_ip_203_0_113_88",
+          "relation": "rev_shares_infra",
+          "target": "ioc_ip_198_51_100_44",
+          "citation": "Compromised Cisco Small Business Routers Subnet"
+        },
+        {
+          "source": "ioc_ip_198_51_100_44",
+          "relation": "rev_resolves_to",
+          "target": "ioc_domain_mesh_gw",
+          "citation": "Netflow Analysis"
+        },
+        {
+          "source": "ioc_domain_mesh_gw",
+          "relation": "rev_communicates_with",
+          "target": "mal_kvbotnet",
+          "citation": "FBI Advisory on Volt Typhoon KV-botnet"
+        },
+        {
+          "source": "mal_kvbotnet",
+          "relation": "rev_uses",
+          "target": "actor_volt_typhoon",
+          "citation": "Lumen Black Lotus Labs"
+        }
+      ],
+      "evidence_validity": 100.0,
+      "citation_coverage": 100.0,
+      "path_connected": true,
+      "path_valid": true,
+      "multihop_path_status": "valid",
+      "multihop_path_valid": true,
+      "unsupported_evidence_rate": 0.0,
+      "invalid_evidence": [],
+      "disconnected_path_edges": [],
+      "model": "NexusCTI Hybrid (GNN + RAG)"
+    },
+    {
+      "case_id": "test_case_10",
+      "case_name": "Sandworm Obfuscated Subnet Pivot to BlackEnergy C2",
+      "category": "deep_chain",
+      "ground_truth": "actor_sandworm",
+      "predicted_top1": "actor_sandworm",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.5494,
+      "hops": 4,
+      "hallucination_risk": "MINIMAL (Dual Grounded)",
+      "evidence_path": [
+        {
+          "source": "ioc_ip_91_242_217_5",
+          "relation": "rev_shares_infra",
+          "target": "ioc_ip_194_28_172_10",
+          "citation": "BGP Subnet Co-location"
+        },
+        {
+          "source": "ioc_ip_194_28_172_10",
+          "relation": "rev_resolves_to",
+          "target": "ioc_domain_ukr_cert",
+          "citation": "Passive DNS Historical"
+        },
+        {
+          "source": "ioc_domain_ukr_cert",
+          "relation": "rev_communicates_with",
+          "target": "mal_blackenergy",
+          "citation": "CERT-UA Bulletin"
+        },
+        {
+          "source": "mal_blackenergy",
+          "relation": "rev_uses",
+          "target": "actor_sandworm",
+          "citation": "E-ISAC Ukraine Power Grid Brief"
+        }
+      ],
+      "evidence_validity": 100.0,
+      "citation_coverage": 100.0,
+      "path_connected": true,
+      "path_valid": true,
+      "multihop_path_status": "valid",
+      "multihop_path_valid": true,
+      "unsupported_evidence_rate": 0.0,
+      "invalid_evidence": [],
+      "disconnected_path_edges": [],
+      "model": "NexusCTI Hybrid (GNN + RAG)"
+    },
+    {
+      "case_id": "test_case_11",
+      "case_name": "Lazarus North Korean AS131279 Gateway Correlation",
+      "category": "deep_chain",
+      "ground_truth": "actor_lazarus",
+      "predicted_top1": "actor_lazarus",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.4906,
+      "hops": 3,
+      "hallucination_risk": "MINIMAL (Dual Grounded)",
+      "evidence_path": [
+        {
+          "source": "ioc_ip_175_45_176_8",
+          "relation": "rev_resolves_to",
+          "target": "ioc_domain_crypto_wallet",
+          "citation": "BGP Routing Origin AS131279"
+        },
+        {
+          "source": "ioc_domain_crypto_wallet",
+          "relation": "rev_communicates_with",
+          "target": "mal_applejeus",
+          "citation": "FBI Cyber Division Alert"
+        },
+        {
+          "source": "mal_applejeus",
+          "relation": "rev_uses",
+          "target": "actor_lazarus",
+          "citation": "CISA AA20-239A"
+        }
+      ],
+      "evidence_validity": 100.0,
+      "citation_coverage": 100.0,
+      "path_connected": true,
+      "path_valid": true,
+      "multihop_path_status": "valid",
+      "multihop_path_valid": true,
+      "unsupported_evidence_rate": 0.0,
+      "invalid_evidence": [],
+      "disconnected_path_edges": [],
+      "model": "NexusCTI Hybrid (GNN + RAG)"
+    },
+    {
+      "case_id": "test_case_12",
+      "case_name": "FIN7 Hosting Staging Infrastructure Pivot",
+      "category": "deep_chain",
+      "ground_truth": "actor_fin7",
+      "predicted_top1": "actor_fin7",
+      "is_correct": true,
+      "rank": 1,
+      "confidence": 0.391,
+      "hops": 3,
+      "hallucination_risk": "MINIMAL (Dual Grounded)",
+      "evidence_path": [
+        {
+          "source": "ioc_ip_193_106_191_4",
+          "relation": "rev_resolves_to",
+          "target": "ioc_domain_doc_share",
+          "citation": "Passive DNS Logging"
+        },
+        {
+          "source": "ioc_domain_doc_share",
+          "relation": "rev_communicates_with",
+          "target": "mal_griffon",
+          "citation": "Crowdstrike Threat Intel"
+        },
+        {
+          "source": "mal_griffon",
+          "relation": "rev_uses",
+          "target": "actor_fin7",
+          "citation": "Mandiant FIN7 In-Depth"
+        }
+      ],
+      "evidence_validity": 100.0,
+      "citation_coverage": 100.0,
+      "path_connected": true,
+      "path_valid": true,
+      "multihop_path_status": "valid",
+      "multihop_path_valid": true,
+      "unsupported_evidence_rate": 0.0,
+      "invalid_evidence": [],
+      "disconnected_path_edges": [],
+      "model": "NexusCTI Hybrid (GNN + RAG)"
+    }
+  ],
+  "total_test_cases": 12
+}

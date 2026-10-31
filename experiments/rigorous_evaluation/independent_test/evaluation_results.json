@@ -1,0 +1,34 @@
+{
+  "dataset_id": "nexuscti-frozen-independent-test-v2",
+  "prediction_artifact": "predictions.json",
+  "ground_truth_artifact": "ground_truth.json",
+  "case_count": 2,
+  "open_set_case_count": 2,
+  "closed_set_top1_accuracy": null,
+  "open_set_correct_abstention_rate": 100.0,
+  "cases": [
+    {
+      "case_id": "frozen_cisa_unitronics_01",
+      "open_set": true,
+      "expected_actor": "actor_cyberav3ngers",
+      "predicted_top1": "actor_lazarus",
+      "top_actor_correct": false,
+      "abstained": true,
+      "correct_open_set_abstention": true,
+      "confidence": 0.3389,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "case_id": "frozen_cisa_exchange_01",
+      "open_set": true,
+      "expected_actor": "actor_play_ransomware",
+      "predicted_top1": "actor_apt28",
+      "top_actor_correct": false,
+      "abstained": true,
+      "correct_open_set_abstention": true,
+      "confidence": 0.3345,
+      "verdict": "INCONCLUSIVE"
+    }
+  ],
+  "interpretation": "This dataset contains open-set actors only. Actor-ranking accuracy against the closed six-actor label set is not applicable; report abstention separately."
+}

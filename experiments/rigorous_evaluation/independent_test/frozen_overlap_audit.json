@@ -1,0 +1,64 @@
+{
+  "dataset_id": "nexuscti-frozen-independent-test-v2",
+  "case_count": 2,
+  "prediction_inputs_label_leaks": 0,
+  "anchors_in_frozen_graph": 0,
+  "anchors_in_frozen_corpus": 0,
+  "expected_edges_in_frozen_graph": 0,
+  "expected_relationship_text_overlaps": 0,
+  "all_sources_registered": true,
+  "frozen_training_data": {
+    "graph": {
+      "version": "nexuscti-default-graph-2026-10-30-v1",
+      "sha256": "016a61dddfee7696610495ef5ae17e64da47dfc5d9ce21c987f84d1cbf143910",
+      "node_count": 65,
+      "authored_edge_count": 65
+    },
+    "retrieval_corpus": {
+      "version": "nexuscti-default-corpus-2026-10-30-v1",
+      "sha256": "5abca5fd18373e62af3414e10438fcba61393342a0402d21cb0c84a56d67068a",
+      "document_count": 6
+    }
+  },
+  "findings": [
+    {
+      "case_id": "frozen_cisa_unitronics_01",
+      "actor_label_leak": false,
+      "detected_actor_labels": [],
+      "anchor_in_frozen_graph": false,
+      "anchor_in_frozen_corpus": false,
+      "expected_relationships": [
+        {
+          "subject": "CyberAv3ngers",
+          "predicate": "targets",
+          "object": "Unitronics Vision Series programmable logic controllers",
+          "edge_exists_in_frozen_graph": false,
+          "subject_and_object_text_in_frozen_corpus": false,
+          "relation_cue_in_frozen_corpus": true,
+          "relationship_text_overlap_in_frozen_corpus": false,
+          "source_record_exists": true
+        }
+      ]
+    },
+    {
+      "case_id": "frozen_cisa_exchange_01",
+      "actor_label_leak": false,
+      "detected_actor_labels": [],
+      "anchor_in_frozen_graph": false,
+      "anchor_in_frozen_corpus": false,
+      "expected_relationships": [
+        {
+          "subject": "Play ransomware actors",
+          "predicate": "exploits",
+          "object": "CVE-2022-41040",
+          "edge_exists_in_frozen_graph": false,
+          "subject_and_object_text_in_frozen_corpus": false,
+          "relation_cue_in_frozen_corpus": true,
+          "relationship_text_overlap_in_frozen_corpus": false,
+          "source_record_exists": true
+        }
+      ]
+    }
+  ],
+  "independence_checks_passed": true
+}

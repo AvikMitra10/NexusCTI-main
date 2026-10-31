@@ -1,0 +1,40 @@
+{
+  "dataset_id": "nexuscti-frozen-independent-test-v2",
+  "cases": [
+    {
+      "case_id": "frozen_cisa_unitronics_01",
+      "expected_actor": "actor_cyberav3ngers",
+      "expected_actor_name": "CyberAv3ngers",
+      "expected_actor_aliases": [
+        "CyberAveng3rs",
+        "Cyber Avengers"
+      ],
+      "open_set": true,
+      "expected_relationships": [
+        {
+          "subject": "CyberAv3ngers",
+          "predicate": "targets",
+          "object": "Unitronics Vision Series programmable logic controllers",
+          "source_id": "cisa_aa23_335a"
+        }
+      ]
+    },
+    {
+      "case_id": "frozen_cisa_exchange_01",
+      "expected_actor": "actor_play_ransomware",
+      "expected_actor_name": "Play ransomware",
+      "expected_actor_aliases": [
+        "Playcrypt"
+      ],
+      "open_set": true,
+      "expected_relationships": [
+        {
+          "subject": "Play ransomware actors",
+          "predicate": "exploits",
+          "object": "CVE-2022-41040",
+          "source_id": "cisa_aa23_352a"
+        }
+      ]
+    }
+  ]
+}

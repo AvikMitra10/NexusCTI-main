@@ -1,0 +1,4 @@
+{"case_id":"indep_teamcity_01","task":"known_actor_unseen_campaign","query":"An internet-facing JetBrains TeamCity build server was exploited using CVE-2023-42793, followed by credential access and persistent access.","anchor_ioc":"CVE-2023-42793"}
+{"case_id":"indep_cyclopsblink_01","task":"known_actor_unseen_campaign","query":"A modular malware framework is detected on a WatchGuard small-office router, with persistent activity involving network devices.","anchor_ioc":"Cyclops Blink"}
+{"case_id":"indep_kimsuky_01","task":"open_set_unseen_actor","query":"A spearphishing attachment targets foreign-policy analysts at a think tank and seeks intelligence about Korean peninsula policy.","anchor_ioc":"foreign policy think tank"}
+{"case_id":"indep_lockbit_01","task":"open_set_unseen_actor","query":"A Citrix NetScaler ADC or Gateway exposed to CVE-2023-4966 shows session hijacking followed by ransomware deployment.","anchor_ioc":"CVE-2023-4966"}
